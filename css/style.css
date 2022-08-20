@@ -23,21 +23,9 @@ img {
 .error404 #error-wrap .error-content,
 .layout > div:first-child:not(.recent-posts),
 .layout > .recent-posts .pagination > *:not(.space),
+#recent-posts > .recent-post-item,
+#aside-content .card-widget,
 .recent-post-item {
     background-color: rgba(255,255,255,.8);
 }
 
-/*�����*/
-#aside-content .card-widget{
-    background: linear-gradient(180deg, rgba(43, 192, 228, 0.8) 0%,#EAECC6 100%) !important;
-}
-
-/*���·���*/
-#recent-posts > .recent-post-item {
-    background: linear-gradient(270deg, rgba(44, 62, 80, 0.8) 0%,#bdc3c7 100%);
-}
-
-    #recent-posts > .recent-post-item > .recent-post-info > .article-meta-wrap {
-        color: #033537;
-    }
-    

@@ -1,0 +1,35 @@
+/*��ҳ���ͼƬ��Ϊ͸��*/
+#page-header::before {
+	background-color: rgba(0,0,0,0) !important;
+}
+
+/*�ײ����ͼƬ��Ϊ͸��*/
+#footer:before {
+	background: transparent !important;
+}
+
+
+/*�������*/
+body {
+	cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur), default;
+}
+
+a,
+img {
+	cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur), default;
+}
+
+.cardHover,
+.error404 #error-wrap .error-content,
+.layout > div:first-child:not(.recent-posts),
+#recent-posts > .recent-post-item,
+#aside-content .card-widget,
+.layout > .recent-posts .pagination > *:not(.space),
+.recent-post-item {
+	background-color:rgba(255,255,255,.8)!important;
+}
+
+
+
+
+

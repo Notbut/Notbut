@@ -29,3 +29,7 @@ img {
     background-color: rgba(255,255,255,.8);
 }
 
+
+.aplayer.aplayer-fixed {
+    background: url(https://cdn.jsdelivr.net/gh/Notbut/picodemo/img/music.jpg) !important;
+}

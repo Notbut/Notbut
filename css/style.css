@@ -11,7 +11,11 @@
 
 /*����*/
 .layout > div:first-child {
-    width: 70%!important;
+    width: 71% !important;
+}
+
+#aside-content {
+    width: 29% !important;
 }
 
 #recent-posts > .recent-post-item > .recent-post-info > .article-title {

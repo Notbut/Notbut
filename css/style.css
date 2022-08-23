@@ -1,24 +1,4 @@
-/*��ҳ���ͼƬ��Ϊ͸��*/
-#page-header::before {
-	background-color: rgba(0,0,0,0) !important;
-}
-
-/*�ײ����ͼƬ��Ϊ͸��*/
-#footer:before {
-	background: transparent !important;
-}
-
-
-/*�������*/
-body {
-	cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur), default;
-}
-
-a,
-img {
-	cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur), default;
-}
-
+/*1.͸����*/
 .cardHover,
 .error404 #error-wrap .error-content,
 .layout > div:first-child:not(.recent-posts),
@@ -26,10 +6,114 @@ img {
 #recent-posts > .recent-post-item,
 #aside-content .card-widget,
 .recent-post-item {
-    background-color: rgba(255,255,255,.8);
+    background-color: rgba(255,255,255,.9);
+}
+
+/*����*/
+.layout > div:first-child {
+    width: 70%!important;
+}
+
+#recent-posts > .recent-post-item > .recent-post-info > .article-title {
+    font-weight: 600 !important;
+    /*��������*/
+}
+    /*ͷͼ��Ϊ͸��*/
+    #page-header::before {
+    background-color: transparent !important;
+}
+
+/*ҳ�Ÿ�Ϊ͸��*/
+#footer:before {
+    background: transparent !important;
+}
+
+/*���ͷ����*/
+#aside-content .card-widget.card-info {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 1) 75%), url(https://cdn.jsdelivr.net/gh/Notbut/picodemo/img/202208231136461.jpg) !important;
+    background-size: cover;
+}
+/*2.�������*/
+body {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur), default;
+}
+
+a,
+img {
+	cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur), default;
 }
 
 
+
+/* 3.������ */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #49b1f5;
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+::-moz-selection {
+    color: #fff;
+    background-color: #49b1f5;
+}
+
+
+/* 4.���ۿ�  */
+.vwrap {
+    box-shadow: 2px 2px 5px #bbb;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 30px;
+    margin: 30px 0px 30px 0px;
+}
+
+/* �������ۿ� */
+.vcard {
+    box-shadow: 2px 2px 5px #bbb;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 30px;
+    margin: 30px 0px 0px 0px;
+}
+
+
+
+/* 5.���ֲ����� */
+.aplayer .aplayer-lrc {
+  display: none !important;
+} 
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+    left: -66px !important;
+    transition: all 0.3s;
+    /* Ĭ��������������66px��ֻ��һ���ͷ���� */
+}
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0 !important;
+        transition: all 0.3s;
+        /* �����ͣ������������㣬��ȫ��ʾ��ť */
+    }
+
+.aplayer.aplayer-fixed {
+    z-index: 999999 !important;
+}
+
 .aplayer.aplayer-fixed {
     background: url(https://cdn.jsdelivr.net/gh/Notbut/picodemo/img/202208221034944.jpg) !important;
+    /*���ֱ���ͼƬ*/
+}
+
+
+/* 6.��������� */
+#article-container figure.highlight {
+    border-radius: 10px;
 }

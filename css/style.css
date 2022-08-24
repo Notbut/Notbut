@@ -10,18 +10,14 @@
 }
 
 /*����*/
-.layout > div:first-child {
-    width: 71% !important;
-}
+    #recent-posts > .recent-post-item{
+        width:90%;
+    }
 
-#aside-content {
-    width: 29% !important;
-}
-
-#recent-posts > .recent-post-item > .recent-post-info > .article-title {
-    font-weight: 600 !important;
-    /*��������*/
-}
+    #recent-posts > .recent-post-item > .recent-post-info > .article-title {
+        font-weight: 600 !important;
+        /*��������*/
+    }
     /*ͷͼ��Ϊ͸��*/
     #page-header::before {
     background-color: transparent !important;

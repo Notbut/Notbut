@@ -11,7 +11,7 @@
 
 /*����*/
     #recent-posts > .recent-post-item{
-        width:90%;
+        height:18%;
     }
 
     #recent-posts > .recent-post-item > .recent-post-info > .article-title {

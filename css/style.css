@@ -10,9 +10,13 @@
 }
 
 /*����*/
-    #recent-posts > .recent-post-item{
-        height:18%;
-    }
+#recent-posts > .recent-post-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 20em;
+    overflow: hidden;
+}
 
     #recent-posts > .recent-post-item > .recent-post-info > .article-title {
         font-weight: 600 !important;

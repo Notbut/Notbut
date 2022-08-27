@@ -9,31 +9,22 @@
     background-color: rgba(255,255,255,.93);
 }
 
-/*����*/
-#recent-posts > .recent-post-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 20em;
-    overflow: hidden;
-}
-#recent-posts .recent-post-item .post_cover {
-    -webkit-transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-}
-
-    #recent-posts > .recent-post-item > .recent-post-info > .article-title {
-        font-weight: 600 !important;
-        /*��������*/
-    }
-    /*ͷͼ��Ϊ͸��*/
-    #page-header::before {
-    background-color: transparent !important;
-}
-
-/*ҳ�Ÿ�Ϊ͸��*/
+/* ҳ��͸�� */
+#footer,
 #footer:before {
     background: transparent !important;
+}
+
+/* ͷͼ͸�� */
+#page-header,
+#page-header::before {
+    background: transparent !important;
+}
+
+/*��ҳ���·����������*/
+#recent-posts > .recent-post-item > .recent-post-info > .article-title {
+    font-weight: 600 !important;
+
 }
 
 /*���ͷ����*/
@@ -48,7 +39,7 @@ body {
 
 a,
 img {
-	cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur), default;
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur), default;
 }
 
 
@@ -96,8 +87,8 @@ img {
 
 /* 5.���ֲ����� */
 .aplayer .aplayer-lrc {
-  display: none !important;
-} 
+    display: none !important;
+}
 
 .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
     left: -66px !important;

@@ -6,7 +6,7 @@
 #recent-posts > .recent-post-item,
 #aside-content .card-widget,
 .recent-post-item {
-    background-color: rgba(255,255,255,.9);
+    background-color: rgba(255,255,255,.93);
 }
 
 /*����*/
@@ -16,6 +16,10 @@
     align-items: center;
     height: 20em;
     overflow: hidden;
+}
+#recent-posts .recent-post-item .post_cover {
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
 }
 
     #recent-posts > .recent-post-item > .recent-post-info > .article-title {

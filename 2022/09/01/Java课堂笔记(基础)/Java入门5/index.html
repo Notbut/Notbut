@@ -1,0 +1,416 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>换了浅斟低唱 | 换了浅斟低唱</title><meta name="author" content="疼木木浩"><meta name="copyright" content="疼木木浩"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="面向对象编程(基础)类与对象类与对象的引出假如有多只猫，它们有年龄、性别、颜色。  如果用变量储存信息，这不利于添加某只猫的新特征，比如体重，如果猫多的时候不利于数据管理，效率低下。 如果用数组储存信息，数据类型不能得到很好的体现，例如String[] cat &#x3D; {“小白”,”20”,”花色”}、而且如果想得到猫的信息，只能通过下标获取、不能体现猫的行为  快速入门  1234567891011">
+<meta property="og:type" content="article">
+<meta property="og:title" content="换了浅斟低唱">
+<meta property="og:url" content="https://notbut.github.io/2022/09/01/Java%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0(%E5%9F%BA%E7%A1%80)/Java%E5%85%A5%E9%97%A85/index.html">
+<meta property="og:site_name" content="换了浅斟低唱">
+<meta property="og:description" content="面向对象编程(基础)类与对象类与对象的引出假如有多只猫，它们有年龄、性别、颜色。  如果用变量储存信息，这不利于添加某只猫的新特征，比如体重，如果猫多的时候不利于数据管理，效率低下。 如果用数组储存信息，数据类型不能得到很好的体现，例如String[] cat &#x3D; {“小白”,”20”,”花色”}、而且如果想得到猫的信息，只能通过下标获取、不能体现猫的行为  快速入门  1234567891011">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://notbut.github.io/img/404.png">
+<meta property="article:published_time" content="2022-09-01T13:35:00.721Z">
+<meta property="article:modified_time" content="2022-09-01T13:35:00.793Z">
+<meta property="article:author" content="疼木木浩">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://notbut.github.io/img/404.png"><link rel="shortcut icon" href="/./img/favicon1.png"><link rel="canonical" href="https://notbut.github.io/2022/09/01/Java%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0(%E5%9F%BA%E7%A1%80)/Java%E5%85%A5%E9%97%A85/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '换了浅斟低唱',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-09-01 21:35:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/style.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="/css/runtime/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/./img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/./img/404.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">换了浅斟低唱</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-01T13:35:00.721Z" title="发表于 2022-09-01 21:35:00">2022-09-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-01T13:35:00.793Z" title="更新于 2022-09-01 21:35:00">2022-09-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="面向对象编程-基础"><a href="#面向对象编程-基础" class="headerlink" title="面向对象编程(基础)"></a>面向对象编程(基础)</h2><h3 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h3><h4 id="类与对象的引出"><a href="#类与对象的引出" class="headerlink" title="类与对象的引出"></a>类与对象的引出</h4><p>假如有多只猫，它们有年龄、性别、颜色。</p>
+<ol>
+<li>如果用变量储存信息，这不利于添加某只猫的新特征，比如体重，如果猫多的时候<strong>不利于数据管理，效率低下</strong>。</li>
+<li>如果用数组储存信息，<strong>数据类型不能得到很好的体现</strong>，例如String[] cat = {“小白”,”20”,”花色”}、而且如果想得到猫的信息，<strong>只能通过下标获取</strong>、<strong>不能体现猫的行为</strong></li>
+</ol>
+<h4 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h4><p><img src="C:\Users\zaibugaizhongwen\AppData\Roaming\Typora\typora-user-images\image-20220901153739626.png" alt=""></p>
+<p><img src="C:\Users\zaibugaizhongwen\AppData\Roaming\Typora\typora-user-images\image-20220901153702313.png" alt=""></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloWorld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String []args)</span> &#123;</span><br><span class="line">         <span class="type">Cat</span> <span class="variable">cat1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line">		cat1.name = <span class="string">&quot;小白&quot;</span>;</span><br><span class="line">		cat1.age = <span class="number">3</span>;</span><br><span class="line">		cat1.color = <span class="string">&quot;白色&quot;</span>;</span><br><span class="line"></span><br><span class="line">		<span class="type">Cat</span> <span class="variable">cat2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line">		cat2.name = <span class="string">&quot;小花&quot;</span>;</span><br><span class="line">		cat2.age = <span class="number">100</span>;</span><br><span class="line">		cat2.color = <span class="string">&quot;花色&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义一个猫类 Cat -&gt; 自定义的数据类型</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cat</span>&#123;</span><br><span class="line">    <span class="comment">//三个属性</span></span><br><span class="line">    <span class="keyword">private</span> String name;<span class="comment">//访问修饰符：控制属性的访问范围。有四种：public,proctected,默认,private</span></span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">    String color;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="对现在内存中存在的形式"><a href="#对现在内存中存在的形式" class="headerlink" title="对现在内存中存在的形式"></a>对现在内存中存在的形式</h4><p><img src="https://cdn.jsdelivr.net/gh/Notbut/picodemo/img/202209011634627.png" alt=""></p>
+<p> 注意：</p>
+<ol>
+<li>JVM根据数据类型不同来存放不同的空间，字符串是引用类型，按照JVM的规则，他会把字符串放在方法区的常量池的空间</li>
+<li>在创建Cat cat = new Cat()对象时，它会把类的信息加载到方法区</li>
+</ol>
+<h4 id="属性和成员变量"><a href="#属性和成员变量" class="headerlink" title="属性和成员变量"></a>属性和成员变量</h4><ol>
+<li>成员变量 = 属性 = field(字段)</li>
+<li>属性是类的一个组成部分，一般是基本数据类型，也可以是引用类型(对象，数组)。比如前面定义Cat类的int就是属性</li>
+</ol>
+<p>注意事项和细节       </p>
+<ol>
+<li>属性的定义语法和变量是一样的，示例：访问修饰符 属性类型 属性名;</li>
+<li>属性的定义可以是任意类型，包含基本数据类型或引用类型</li>
+<li>属性如果不赋值，有默认值，规则和数组一致</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloWorld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String []args)</span> &#123;</span><br><span class="line">      <span class="comment">//创建Cat对象</span></span><br><span class="line">      <span class="comment">//cat1 是对象名(对象引用)</span></span><br><span class="line">      <span class="comment">//new Cat() 创建的对象空间(数据)才是真正的对象</span></span><br><span class="line">        <span class="type">Cat</span> <span class="variable">cat1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//猫类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cat</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">    String color;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>创建对象的两种形式：</p>
+<ol>
+<li>先声明在创建：Cat cat; cat = new Cat();</li>
+<li>直接创建：Cat cat = new Cat();</li>
+</ol>
+<p>访问属性：</p>
+<p>对象名.属性名;</p>
+<h4 id="类与对象的内存分配机制"><a href="#类与对象的内存分配机制" class="headerlink" title="类与对象的内存分配机制"></a>类与对象的内存分配机制</h4><p>Java内存的结构分析：</p>
+<ol>
+<li>栈：一般存放基本数据类型(局部变量)</li>
+<li>堆：存放对象(Cat cat，数组)</li>
+<li>方法区：常量池(常量，比如字符串)，类加载信息</li>
+</ol>
+<p>Java创建对象的流程简单分析：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一个人类(Person)(有名字，年龄)</span></span><br><span class="line"><span class="type">Person</span> <span class="variable">p1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Person</span>(); <span class="comment">//Person p1这一步会在方法区的常量池中加载Person类信息(1.属性信息2.方法信息)。new在堆里面开空间(放置age和name)，然后把地址返回给栈中的p1</span></span><br><span class="line">p1.age = <span class="number">10</span>;</span><br><span class="line">p1.name = <span class="string">&quot;小米&quot;</span>;</span><br><span class="line"><span class="type">Person</span> <span class="variable">p2</span> <span class="operator">=</span> p1;<span class="comment">//让p2指向p1</span></span><br><span class="line">System.out.println(p2.age);</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/Notbut/picodemo/img/202209011802574.png" alt=""></p>
+<h3 id="成员方法"><a href="#成员方法" class="headerlink" title="成员方法"></a>成员方法</h3><h4 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h4><p>在某些情况下，我们需要定义成员方法。比如人类：除了一些属性外(年龄，姓名)，我们还有一些行为：跑步，学习。这时就要用成员方法才能完成。<strong>(就是C语言中的函数)</strong></p>
+<h4 id="成员方法的定义-也叫-方法"><a href="#成员方法的定义-也叫-方法" class="headerlink" title="成员方法的定义(也叫 方法)"></a>成员方法的定义(也叫 方法)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">访问修饰符 返回数据类型 方法名 (形参列表...)&#123;</span><br><span class="line">    <span class="comment">//方法体语句</span></span><br><span class="line">    <span class="keyword">return</span> 返回值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意事项和细节：</p>
+<ol>
+<li>方法在类中</li>
+<li>访问修饰符(作用是控制方法的范围)，如果不写默认访问，有四种（public protected private 默认）</li>
+<li>最多一个返回值，返回的类型不受限制（数组</li>
+<li>如果有返回类型，必须有return</li>
+<li>如果方法返回类型是void，只写return或不写</li>
+</ol>
+<h4 id="快速入门-1"><a href="#快速入门-1" class="headerlink" title="快速入门"></a>快速入门</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloWorld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String []args)</span> &#123;</span><br><span class="line">        <span class="comment">//方法使用</span></span><br><span class="line">        <span class="comment">//1. 方法写好后，如果不去调用，不会输出</span></span><br><span class="line">        <span class="comment">//2. 先创建对象，然后调用即可</span></span><br><span class="line">        Person p1= <span class="keyword">new</span> <span class="title class_">Person</span>();</span><br><span class="line">        p1.speak();</span><br><span class="line">        p1.getSum(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">    <span class="comment">//方法(成员方法，就是C语言中的函数)</span></span><br><span class="line">    <span class="comment">//1. public表示方法是公开的</span></span><br><span class="line">    <span class="comment">//2. void表示方法没有返回值</span></span><br><span class="line">    <span class="comment">//3. speak：方法名。</span></span><br><span class="line">    <span class="comment">//4. ()形参列表，当前为空</span></span><br><span class="line">    <span class="comment">//5. &#123;&#125;方法体，写我们要执行的代码</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">speak</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;我是一个好人&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getSum</span><span class="params">(<span class="type">int</span> num1,<span class="type">int</span> num2)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num1+num2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="方法的调用机制原理"><a href="#方法的调用机制原理" class="headerlink" title="方法的调用机制原理"></a>方法的调用机制原理</h4><ol>
+<li>首先在栈里面开辟main空间</li>
+<li>在执行Person p1 = new…时，在堆里面有对象产生，p1指向 堆里面的方法</li>
+<li>然后执行 int res = p1.getSum(1,2)时，在栈里面开辟getSum，通过地址把1，2传给他</li>
+<li>再执行代码，return返回给res，getSum的空间释放</li>
+</ol>
+<p><img src="C:\Users\zaibugaizhongwen\AppData\Roaming\Typora\typora-user-images\image-20220901202633330.png" alt=""></p>
+<p>注意事项和细节：</p>
+<ol>
+<li>同一个类中的方法调用：直接调用即可</li>
+<li>如果跨类，对象名.方法名(参数)；</li>
+</ol>
+<h3 id="成员方法传参机制"><a href="#成员方法传参机制" class="headerlink" title="成员方法传参机制"></a>成员方法传参机制</h3><ol>
+<li>基本数据类型，传递的是值（值拷贝），形参的任何改变不影响实参；</li>
+<li>引用类型传递的是地址（传递也是值，但是值是地址），可以通过形参影响实参；</li>
+<li>若是对象，则变得不同，因为对象传的是地址。</li>
+</ol>
+<h3 id="overload"><a href="#overload" class="headerlink" title="overload"></a>overload</h3><h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><h3 id="构造体"><a href="#构造体" class="headerlink" title="构造体"></a>构造体</h3><h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">疼木木浩</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://notbut.github.io/2022/09/01/Java%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0(%E5%9F%BA%E7%A1%80)/Java%E5%85%A5%E9%97%A85/">https://notbut.github.io/2022/09/01/Java%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0(%E5%9F%BA%E7%A1%80)/Java%E5%85%A5%E9%97%A85/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://Notbut.github.io" target="_blank">换了浅斟低唱</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/./img/404.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/09/01/Java%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0(%E5%9F%BA%E7%A1%80)/Java%E5%85%A5%E9%97%A84/"><img class="next-cover" src="/./img/404.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81NTY2Ny8zMjEzNA=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/./img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">疼木木浩</div><div class="author-info__description">疼木木浩的博客</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Notbut"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Notbut" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:tengmumuhao@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://space.bilibili.com/516389154?spm_id_from=333.1007.0.0" target="_blank" title="bilibili"><i class="fa-brands fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客,QQ:1579574386</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B-%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">面向对象编程(基础)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.1.</span> <span class="toc-text">类与对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%BC%95%E5%87%BA"><span class="toc-number">1.1.1.</span> <span class="toc-text">类与对象的引出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="toc-number">1.1.2.</span> <span class="toc-text">快速入门</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E7%8E%B0%E5%9C%A8%E5%86%85%E5%AD%98%E4%B8%AD%E5%AD%98%E5%9C%A8%E7%9A%84%E5%BD%A2%E5%BC%8F"><span class="toc-number">1.1.3.</span> <span class="toc-text">对现在内存中存在的形式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E5%92%8C%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F"><span class="toc-number">1.1.4.</span> <span class="toc-text">属性和成员变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E6%9C%BA%E5%88%B6"><span class="toc-number">1.1.5.</span> <span class="toc-text">类与对象的内存分配机制</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text">成员方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.2.1.</span> <span class="toc-text">基本介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95%E7%9A%84%E5%AE%9A%E4%B9%89-%E4%B9%9F%E5%8F%AB-%E6%96%B9%E6%B3%95"><span class="toc-number">1.2.2.</span> <span class="toc-text">成员方法的定义(也叫 方法)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-1"><span class="toc-number">1.2.3.</span> <span class="toc-text">快速入门</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E7%9A%84%E8%B0%83%E7%94%A8%E6%9C%BA%E5%88%B6%E5%8E%9F%E7%90%86"><span class="toc-number">1.2.4.</span> <span class="toc-text">方法的调用机制原理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95%E4%BC%A0%E5%8F%82%E6%9C%BA%E5%88%B6"><span class="toc-number">1.3.</span> <span class="toc-text">成员方法传参机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#overload"><span class="toc-number">1.4.</span> <span class="toc-text">overload</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0"><span class="toc-number">1.5.</span> <span class="toc-text">可变参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.6.</span> <span class="toc-text">作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E4%BD%93"><span class="toc-number">1.7.</span> <span class="toc-text">构造体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#this"><span class="toc-number">1.8.</span> <span class="toc-text">this</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/09/01/Java%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0(%E5%9F%BA%E7%A1%80)/Java%E5%85%A5%E9%97%A85/" title="无题"><img src="/./img/404.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/09/01/Java%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0(%E5%9F%BA%E7%A1%80)/Java%E5%85%A5%E9%97%A85/" title="无题">无题</a><time datetime="2022-09-01T13:35:00.721Z" title="发表于 2022-09-01 21:35:00">2022-09-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/01/Java%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0(%E5%9F%BA%E7%A1%80)/Java%E5%85%A5%E9%97%A84/" title="无题"><img src="/./img/404.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/09/01/Java%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0(%E5%9F%BA%E7%A1%80)/Java%E5%85%A5%E9%97%A84/" title="无题">无题</a><time datetime="2022-09-01T13:34:06.609Z" title="发表于 2022-09-01 21:34:06">2022-09-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/08/31/Linux/Linux%E5%85%A5%E9%97%A8/" title="无题"><img src="/./img/404.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/08/31/Linux/Linux%E5%85%A5%E9%97%A8/" title="无题">无题</a><time datetime="2022-08-31T08:55:52.809Z" title="发表于 2022-08-31 16:55:52">2022-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/08/28/Java%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0(%E5%9F%BA%E7%A1%80)/Java%E5%85%A5%E9%97%A83/" title="java入门(第03章 运算符"><img src="/./img/006.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java入门(第03章 运算符"/></a><div class="content"><a class="title" href="/2022/08/28/Java%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0(%E5%9F%BA%E7%A1%80)/Java%E5%85%A5%E9%97%A83/" title="java入门(第03章 运算符">java入门(第03章 运算符</a><time datetime="2022-08-28T12:21:59.150Z" title="发表于 2022-08-28 20:21:59">2022-08-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/08/28/Java%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0(%E5%9F%BA%E7%A1%80)/Java%E5%85%A5%E9%97%A82/" title="java入门(第02章 变量"><img src="/./img/006.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java入门(第02章 变量"/></a><div class="content"><a class="title" href="/2022/08/28/Java%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0(%E5%9F%BA%E7%A1%80)/Java%E5%85%A5%E9%97%A82/" title="java入门(第02章 变量">java入门(第02章 变量</a><time datetime="2022-08-28T12:21:29.823Z" title="发表于 2022-08-28 20:21:29">2022-08-28</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/./img/404.png')"><div id="footer-wrap"><div class="copyright">&copy;2022 By 疼木木浩</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !false) {
+  if (false) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><script defer src="https://cdn.jsdelivr.net/combine/npm/jquery@latest/dist/jquery.min.js,gh/weilining/jsdelivr/jquery/circlemagic/circlemagic.min.js,gh/weilining/jsdelivr@latest/jquery/circlemagic/butterflycirclemagic.js"></script><div class="aplayer no-destroy" data-id="8593681374" data-server="tencent" data-type="playlist" data-fixed="true" data-autoplay="true"> </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title=""><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" data-title="主题版本Butterfly_v4.2.2" title=""><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/Notbut" style="margin-inline:5px" data-title="本站项目由Github托管" title=""><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a></p>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="/js/runtime/runtime.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('flink-list-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__flipInY');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('flink-list-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__animated');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('article-sort-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__slideInRight');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('site-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__flipInY');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('site-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__animated');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow_init.js"></script><script async src="/js/ali_font.js"></script><script data-pjax src="https://cdn.cbd.int/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+  function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+      }
+
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://github-api-xi.vercel.app/api/?Notbut/api?Notbut",['#e4dfd7', '#f9f4dc', '#f7e8aa', '#f7e8aa', '#f8df72', '#fcd217', '#fcc515', '#f28e16', '#fb8b05', '#d85916', '#f43e06'],'Notbut')
+    }
+  </script><!-- hexo injector body_end end --></body></html>

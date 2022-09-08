@@ -6,7 +6,7 @@
 #recent-posts > .recent-post-item,
 #aside-content .card-widget,
 .recent-post-item {
-    background-color: rgba(255,255,245,.93);
+    filter: opacity(93.3%);
 }
 
 /* ҳ��͸�� */
@@ -29,7 +29,7 @@
 
 /*���ͷ����*/
 #aside-content .card-widget.card-info {
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 1) 75%), url(https://cdn.jsdelivr.net/gh/Notbut/picodemo/img/202208231136461.jpg) !important;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 1) 75%), url(/img/left_column.jpg) !important;
     background-size: cover;
 }
 /*2.�������*/
@@ -107,7 +107,7 @@ img {
 }
 
 .aplayer.aplayer-fixed {
-    background: url(https://cdn.jsdelivr.net/gh/Notbut/picodemo/img/202208221034944.jpg) !important;
+    background: url(/img/music.jpg) !important;
     /*���ֱ���ͼƬ*/
 }
 

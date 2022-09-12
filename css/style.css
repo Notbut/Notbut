@@ -29,7 +29,7 @@
 
 /*���ͷ����*/
 #aside-content .card-widget.card-info {
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 1) 75%), url(/img/left_column.jpg) !important;
+    background-image:url(/img/left_column.png) !important;
     background-size: cover;
 }
 /*2.�������*/
